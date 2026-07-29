@@ -1,0 +1,23 @@
+.teams-list-page {
+  padding: var(--spacing-4);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-6);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+}

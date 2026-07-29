@@ -1,0 +1,180 @@
+.employee-detail-page {
+  padding: var(--spacing-4);
+}
+
+.employee-detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+  padding: var(--spacing-6);
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.employee-avatar-large {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.employee-header-info {
+  flex: 1;
+}
+
+.employee-header-info h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.employee-position {
+  color: var(--gray-500);
+  margin: var(--spacing-1) 0;
+}
+
+.employee-status {
+  margin-top: var(--spacing-1);
+}
+
+.employee-actions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.employee-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.info-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.employee-address {
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--gray-200);
+}
+
+.employee-address h4 {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.employee-address p {
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.project-item:hover {
+  background: var(--gray-100);
+}
+
+.project-name {
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.attendance-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.attendance-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.attendance-date {
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.attendance-overtime {
+  font-size: var(--font-size-sm);
+  color: var(--success);
+  font-weight: 600;
+}
+
+.emergency-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.empty-message {
+  color: var(--gray-400);
+  text-align: center;
+  padding: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+  .employee-detail-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .employee-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid,
+  .emergency-info {
+    grid-template-columns: 1fr;
+  }
+}

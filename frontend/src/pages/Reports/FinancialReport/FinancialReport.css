@@ -1,0 +1,88 @@
+.financial-report-page {
+  padding: var(--spacing-4);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.report-controls {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: end;
+}
+
+.report-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.summary-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.summary-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+
+.summary-value.revenue {
+  color: var(--primary-color);
+}
+
+.summary-value.expenses {
+  color: var(--danger);
+}
+
+.summary-value.margin {
+  color: var(--success);
+}
+
+.summary-value.margin-rate {
+  color: var(--warning);
+}
+
+.report-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .report-controls {
+    flex-wrap: wrap;
+  }
+  
+  .report-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .report-charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,108 @@
+﻿.navbar-login-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.navbar-login-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  color: white;
+  text-decoration: none;
+}
+
+.dashboard-guest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+}
+
+.dashboard-guest-content {
+  text-align: center;
+  padding: var(--spacing-8);
+  max-width: 500px;
+}
+
+.guest-icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: var(--spacing-4);
+}
+
+.dashboard-guest-content h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-2);
+}
+
+.dashboard-guest-content p {
+  color: var(--gray-500);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-6);
+}
+
+.guest-login-btn {
+  display: inline-block;
+  padding: var(--spacing-3) var(--spacing-6);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  transition: all 0.2s ease;
+}
+
+.guest-login-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: white;
+  text-decoration: none;
+}
+
+
+
+.navbar-login-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  transition: all 0.2s ease;
+}
+
+.navbar-login-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+  color: white;
+  text-decoration: none;
+}
+
+/* ✅ Style pour le bouton de déconnexion dans le dropdown */
+.dropdown-item.logout {
+  color: var(--danger);
+}
+
+.dropdown-item.logout:hover {
+  background: #fee2e2;
+  color: #991b1b;
+}

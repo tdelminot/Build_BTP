@@ -1,0 +1,17 @@
+.pie-chart {
+  width: 100%;
+  position: relative;
+}
+
+.pie-chart-title {
+  text-align: center;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--gray-700);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+.pie-chart canvas {
+  width: 100% !important;
+  height: 100% !important;
+}

@@ -1,0 +1,35 @@
+.attendance-page {
+  padding: var(--spacing-4);
+}
+
+.page-header {
+  margin-bottom: var(--spacing-6);
+}
+
+.page-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.attendance-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--spacing-4);
+  align-items: end;
+  margin-bottom: var(--spacing-4);
+}
+
+.attendance-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .attendance-controls {
+    grid-template-columns: 1fr;
+  }
+}

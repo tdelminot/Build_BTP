@@ -1,0 +1,172 @@
+.project-detail-page {
+  padding: var(--spacing-4);
+}
+
+.project-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+}
+
+.project-detail-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.project-reference {
+  color: var(--gray-500);
+  margin: var(--spacing-1) 0 0 0;
+}
+
+.project-actions {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.project-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.info-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.info-value {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.project-description {
+  margin-top: var(--spacing-4);
+  padding-top: var(--spacing-4);
+  border-top: 1px solid var(--gray-200);
+}
+
+.project-description h4 {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  margin: 0 0 var(--spacing-2) 0;
+}
+
+.project-description p {
+  color: var(--gray-600);
+  margin: 0;
+}
+
+.team-list,
+.task-list,
+.expense-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.member-name {
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.member-position {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.task-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.task-title {
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.task-date {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.expense-description {
+  color: var(--gray-700);
+}
+
+.expense-amount {
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+.expense-total {
+  padding: var(--spacing-3);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-md);
+  text-align: right;
+}
+
+.empty-message {
+  color: var(--gray-400);
+  text-align: center;
+  padding: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+  .project-detail-header {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .project-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,67 @@
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: var(--spacing-4) var(--spacing-6);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.card-header-content {
+  flex: 1;
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.card-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  margin: var(--spacing-1) 0 0 0;
+}
+
+.card-header-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-left: var(--spacing-4);
+}
+
+.card-body {
+  padding: var(--spacing-6);
+}
+
+/* Variantes */
+.card-default {
+  background: white;
+}
+
+.card-primary {
+  border-left: 4px solid var(--primary-color);
+}
+
+.card-success {
+  border-left: 4px solid var(--success);
+}
+
+.card-danger {
+  border-left: 4px solid var(--danger);
+}
+
+.card-warning {
+  border-left: 4px solid var(--warning);
+}

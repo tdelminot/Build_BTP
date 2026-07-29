@@ -1,0 +1,127 @@
+.gantt-chart {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 100%;
+}
+
+.gantt-header {
+  display: flex;
+  background: var(--gray-50);
+  border-bottom: 2px solid var(--gray-200);
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  color: var(--gray-600);
+  min-height: 40px;
+}
+
+.gantt-task-label {
+  width: 200px;
+  min-width: 200px;
+  padding: var(--spacing-2) var(--spacing-3);
+  display: flex;
+  align-items: center;
+  border-right: 1px solid var(--gray-200);
+}
+
+.gantt-timeline {
+  flex: 1;
+  position: relative;
+  display: flex;
+  overflow-x: auto;
+}
+
+.gantt-day {
+  flex: 1;
+  min-width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid var(--gray-100);
+}
+
+.gantt-day-label {
+  font-size: var(--font-size-xs);
+  color: var(--gray-400);
+  transform: rotate(-45deg);
+  white-space: nowrap;
+}
+
+.gantt-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.gantt-row {
+  display: flex;
+  border-bottom: 1px solid var(--gray-100);
+  min-height: 40px;
+}
+
+.gantt-row:hover {
+  background: var(--gray-50);
+}
+
+.gantt-task-name {
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gantt-timeline {
+  position: relative;
+}
+
+.gantt-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 24px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gantt-bar:hover {
+  opacity: 0.9;
+  box-shadow: var(--shadow-md);
+  transform: translateY(-50%) scaleY(1.2);
+}
+
+.gantt-bar-label {
+  font-size: var(--font-size-xs);
+  color: white;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 var(--spacing-2);
+}
+
+.gantt-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--gray-400);
+  font-size: var(--font-size-base);
+}
+
+@media (max-width: 768px) {
+  .gantt-task-label {
+    width: 120px;
+    min-width: 120px;
+  }
+  
+  .gantt-day-label {
+    font-size: var(--font-size-xs);
+  }
+}

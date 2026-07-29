@@ -1,0 +1,122 @@
+.client-detail-page {
+  padding: var(--spacing-4);
+}
+
+.client-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-6);
+}
+
+.client-detail-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin: 0;
+}
+
+.client-siret {
+  color: var(--gray-500);
+  margin: var(--spacing-1) 0 0 0;
+}
+
+.client-actions {
+  display: flex;
+  gap: var(--spacing-2);
+  align-items: center;
+}
+
+.client-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+}
+
+.stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700);
+  color: var(--gray-800);
+}
+
+.client-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+}
+
+.contact-label {
+  font-size: var(--font-size-sm);
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.contact-value {
+  font-size: var(--font-size-base);
+  color: var(--gray-700);
+}
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.project-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+}
+
+.project-name {
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.empty-message {
+  color: var(--gray-400);
+  text-align: center;
+  padding: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+  .client-detail-header {
+    flex-direction: column;
+    gap: var(--spacing-4);
+  }
+  
+  .client-stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .client-detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
