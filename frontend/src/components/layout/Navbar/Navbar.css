@@ -1,15 +1,81 @@
-﻿.navbar-login-btn {
+﻿/* ✅ Navbar principale */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-2) var(--spacing-4);
+  height: 56px;
+  background: white;
+  border-bottom: 1px solid var(--gray-200);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ✅ Partie gauche */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.navbar-toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: var(--spacing-1);
+  color: var(--gray-600);
+}
+
+.navbar-toggle:hover {
+  color: var(--gray-800);
+}
+
+.navbar-brand {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
-  padding: var(--spacing-2) var(--spacing-4);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--font-size-lg);
+  color: var(--gray-800);
+}
+
+.brand-icon {
+  font-size: 24px;
+}
+
+.brand-text {
+  display: none;
+  color: var(--primary-color);
+}
+
+/* ✅ Partie droite */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+/* ✅ Bouton Connexion */
+.navbar-login-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-1) var(--spacing-3);
   background: var(--primary-color);
   color: white;
+  border: none;
   border-radius: var(--radius-md);
   text-decoration: none;
   font-weight: 500;
   font-size: var(--font-size-sm);
   transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: var(--font-family);
+  height: 32px;
 }
 
 .navbar-login-btn:hover {
@@ -20,28 +86,128 @@
   text-decoration: none;
 }
 
+/* ✅ Profil utilisateur */
+.navbar-user {
+  position: relative;
+}
+
+.navbar-user-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-md);
+  transition: background 0.2s;
+}
+
+.navbar-user-btn:hover {
+  background: var(--gray-100);
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.user-name {
+  display: none;
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+  color: var(--gray-700);
+}
+
+.user-chevron {
+  display: none;
+  font-size: var(--font-size-sm);
+  color: var(--gray-400);
+}
+
+/* ✅ Dropdown du profil */
+.navbar-dropdown {
+  position: absolute;
+  top: calc(100% + var(--spacing-2));
+  right: 0;
+  min-width: 200px;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--gray-200);
+  overflow: hidden;
+  z-index: var(--z-dropdown);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-4);
+  color: var(--gray-700);
+  text-decoration: none;
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--font-size-sm);
+  font-family: var(--font-family);
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: var(--gray-50);
+}
+
+.dropdown-item.logout {
+  color: var(--danger);
+}
+
+.dropdown-item.logout:hover {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.dropdown-divider {
+  margin: var(--spacing-1) 0;
+  border: none;
+  border-top: 1px solid var(--gray-200);
+}
+
+/* ✅ Page invité (Dashboard) */
 .dashboard-guest {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 80vh;
   background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+  padding: var(--spacing-4);
 }
 
 .dashboard-guest-content {
   text-align: center;
-  padding: var(--spacing-8);
+  padding: var(--spacing-6);
   max-width: 500px;
 }
 
 .guest-icon {
-  font-size: 64px;
+  font-size: 48px;
   display: block;
   margin-bottom: var(--spacing-4);
 }
 
 .dashboard-guest-content h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--gray-800);
   margin-bottom: var(--spacing-2);
@@ -49,20 +215,25 @@
 
 .dashboard-guest-content p {
   color: var(--gray-500);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   margin-bottom: var(--spacing-6);
 }
 
 .guest-login-btn {
   display: inline-block;
-  padding: var(--spacing-3) var(--spacing-6);
+  padding: var(--spacing-2) var(--spacing-6);
   background: var(--primary-color);
   color: white;
+  border: none;
   border-radius: var(--radius-md);
   text-decoration: none;
   font-weight: 600;
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   transition: all 0.2s ease;
+  cursor: pointer;
+  font-family: var(--font-family);
+  width: 100%;
+  max-width: 300px;
 }
 
 .guest-login-btn:hover {
@@ -73,36 +244,51 @@
   text-decoration: none;
 }
 
+/* ============================================
+   ✅ BREAKPOINTS RESPONSIVE
+   ============================================ */
 
-
-.navbar-login-btn {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  padding: var(--spacing-2) var(--spacing-4);
-  background: var(--primary-color);
-  color: white;
-  border-radius: var(--radius-md);
-  text-decoration: none;
-  font-weight: 500;
-  font-size: var(--font-size-sm);
-  transition: all 0.2s ease;
+/* ✅ Tablette (640px et plus) */
+@media (min-width: 640px) {
+  .brand-text {
+    display: inline;
+  }
+  
+  .user-name {
+    display: inline;
+  }
+  
+  .user-chevron {
+    display: inline;
+  }
+  
+  .navbar-login-btn {
+    padding: var(--spacing-2) var(--spacing-4);
+    height: 36px;
+  }
 }
 
-.navbar-login-btn:hover {
-  background: var(--primary-dark);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-  color: white;
-  text-decoration: none;
-}
-
-/* ✅ Style pour le bouton de déconnexion dans le dropdown */
-.dropdown-item.logout {
-  color: var(--danger);
-}
-
-.dropdown-item.logout:hover {
-  background: #fee2e2;
-  color: #991b1b;
+/* ✅ Desktop (1024px et plus) */
+@media (min-width: 1024px) {
+  .navbar {
+    padding: var(--spacing-2) var(--spacing-6);
+    height: 64px;
+  }
+  
+  .navbar-toggle {
+    display: none;
+  }
+  
+  .navbar-brand {
+    font-size: var(--font-size-xl);
+  }
+  
+  .brand-icon {
+    font-size: 28px;
+  }
+  
+  .navbar-login-btn {
+    height: 40px;
+    padding: var(--spacing-2) var(--spacing-6);
+  }
 }

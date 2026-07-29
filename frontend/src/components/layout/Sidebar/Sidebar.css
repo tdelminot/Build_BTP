@@ -3,21 +3,49 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 250px;
+  width: 280px;
   background: white;
   border-right: 1px solid var(--gray-200);
   display: flex;
   flex-direction: column;
   z-index: 200;
   transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  box-shadow: var(--shadow-lg);
 }
 
+/* ✅ Sidebar ouverte sur mobile */
+.sidebar-open {
+  transform: translateX(0);
+}
+
+/* ✅ Overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 199;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ✅ Sidebar Header */
 .sidebar-header {
   padding: var(--spacing-4) var(--spacing-6);
   border-bottom: 1px solid var(--gray-200);
   height: 64px;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .sidebar-logo {
@@ -36,22 +64,27 @@
   color: var(--primary-color);
 }
 
+/* ✅ Sidebar Navigation */
 .sidebar-nav {
   flex: 1;
-  padding: var(--spacing-4) var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-2);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
 }
 
 .sidebar-link {
   display: flex;
   align-items: center;
   gap: var(--spacing-3);
-  padding: var(--spacing-2) var(--spacing-4);
+  padding: var(--spacing-3) var(--spacing-4);
   color: var(--gray-600);
   text-decoration: none;
   border-radius: var(--radius-md);
   transition: all 0.2s;
-  margin-bottom: var(--spacing-1);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
 }
 
 .sidebar-link:hover {
@@ -68,6 +101,7 @@
   font-size: 20px;
   width: 24px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .link-label {
@@ -75,9 +109,11 @@
   font-weight: 500;
 }
 
+/* ✅ Sidebar Footer */
 .sidebar-footer {
   padding: var(--spacing-4) var(--spacing-6);
   border-top: 1px solid var(--gray-200);
+  flex-shrink: 0;
 }
 
 .sidebar-version {
@@ -86,27 +122,26 @@
   text-align: center;
 }
 
-.sidebar-overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 199;
-}
+/* ============================================
+   ✅ BREAKPOINTS RESPONSIVE
+   ============================================ */
 
-@media (max-width: 768px) {
+/* ✅ Desktop (1024px et plus) */
+@media (min-width: 1024px) {
   .sidebar {
-    transform: translateX(-100%);
-  }
-  
-  .sidebar-open {
     transform: translateX(0);
+    width: 250px;
+    box-shadow: none;
   }
   
   .sidebar-overlay {
+    display: none !important;
+  }
+}
+
+/* ✅ Mobile - Overlay visible */
+@media (max-width: 1023px) {
+  .sidebar-overlay.show {
     display: block;
   }
 }

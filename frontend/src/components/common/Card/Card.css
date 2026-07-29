@@ -12,9 +12,9 @@
 
 .card-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: var(--spacing-4) var(--spacing-6);
+  flex-direction: column;
+  gap: var(--spacing-2);
+  padding: var(--spacing-3) var(--spacing-4);
   border-bottom: 1px solid var(--gray-200);
 }
 
@@ -23,7 +23,7 @@
 }
 
 .card-title {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: 600;
   color: var(--gray-800);
   margin: 0;
@@ -38,11 +38,10 @@
 .card-header-actions {
   display: flex;
   gap: var(--spacing-2);
-  margin-left: var(--spacing-4);
 }
 
 .card-body {
-  padding: var(--spacing-6);
+  padding: var(--spacing-3) var(--spacing-4);
 }
 
 /* Variantes */
@@ -64,4 +63,26 @@
 
 .card-warning {
   border-left: 4px solid var(--warning);
+}
+
+/* ============================================
+   ✅ BREAKPOINTS RESPONSIVE
+   ============================================ */
+
+/* ✅ Tablette (640px et plus) */
+@media (min-width: 640px) {
+  .card-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-4) var(--spacing-6);
+  }
+  
+  .card-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .card-body {
+    padding: var(--spacing-4) var(--spacing-6);
+  }
 }

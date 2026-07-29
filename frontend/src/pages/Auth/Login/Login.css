@@ -9,34 +9,35 @@
 
 .login-container {
   width: 100%;
-  max-width: 420px;
+  max-width: 400px;
   background: white;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
-  padding: var(--spacing-8);
+  padding: var(--spacing-6);
 }
 
 .login-header {
   text-align: center;
-  margin-bottom: var(--spacing-8);
+  margin-bottom: var(--spacing-6);
 }
 
 .login-logo {
   font-size: 48px;
   display: block;
-  margin-bottom: var(--spacing-4);
+  margin-bottom: var(--spacing-3);
 }
 
 .login-header h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: 700;
   color: var(--primary-color);
-  margin: 0 0 var(--spacing-2) 0;
+  margin: 0 0 var(--spacing-1) 0;
 }
 
 .login-header p {
   color: var(--gray-500);
   margin: 0;
+  font-size: var(--font-size-sm);
 }
 
 .login-form {
@@ -82,4 +83,35 @@
 
 .register-link:hover {
   text-decoration: underline;
+}
+
+/* ============================================
+   ✅ BREAKPOINTS RESPONSIVE
+   ============================================ */
+
+/* ✅ Mobile large (480px et plus) */
+@media (min-width: 480px) {
+  .login-container {
+    padding: var(--spacing-8);
+  }
+  
+  .login-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ✅ Petit mobile (moins de 400px) */
+@media (max-width: 400px) {
+  .login-container {
+    padding: var(--spacing-4);
+    border-radius: var(--radius-lg);
+  }
+  
+  .login-logo {
+    font-size: 36px;
+  }
+  
+  .login-header h1 {
+    font-size: var(--font-size-lg);
+  }
 }

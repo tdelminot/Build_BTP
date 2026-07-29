@@ -1,6 +1,7 @@
 .dashboard {
   max-width: 1400px;
   margin: 0 auto;
+  padding: var(--spacing-3);
 }
 
 .dashboard-loading {
@@ -16,15 +17,16 @@
   color: var(--gray-500);
 }
 
+/* ✅ Header responsive */
 .dashboard-header {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: var(--spacing-6);
+  flex-direction: column;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
 }
 
 .dashboard-header h1 {
-  font-size: var(--font-size-2xl);
+  font-size: var(--font-size-xl);
   font-weight: 700;
   margin: 0;
   color: var(--gray-800);
@@ -33,116 +35,22 @@
 .dashboard-subtitle {
   color: var(--gray-500);
   margin: var(--spacing-1) 0 0 0;
-}
-
-.dashboard-refresh {
-  padding: var(--spacing-2) var(--spacing-4);
-  background: white;
-  border: 1px solid var(--gray-200);
-  border-radius: var(--radius-md);
-  cursor: pointer;
   font-size: var(--font-size-sm);
-  transition: all 0.2s;
-}
-
-.dashboard-refresh:hover {
-  background: var(--gray-50);
-}
-
-.dashboard-kpis {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--spacing-4);
-  margin-bottom: var(--spacing-6);
-}
-
-.dashboard-charts {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--spacing-4);
-  margin-bottom: var(--spacing-6);
-}
-
-.chart-card,
-.status-card,
-.activities-card {
-  background: white;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  padding: var(--spacing-4);
-  transition: box-shadow 0.2s;
-}
-
-.chart-card:hover,
-.status-card:hover,
-.activities-card:hover {
-  box-shadow: var(--shadow-md);
-}
-
-.chart-card h3,
-.status-card h3,
-.activities-card h3 {
-  font-size: var(--font-size-base);
-  font-weight: 600;
-  margin: 0 0 var(--spacing-4) 0;
-  color: var(--gray-700);
-}
-
-.dashboard-bottom {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-4);
-}
-
-@media (max-width: 1200px) {
-  .dashboard-kpis {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-  .dashboard-charts {
-    grid-template-columns: 1fr;
-  }
-  
-  .dashboard-bottom {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .dashboard-header {
-    flex-direction: column;
-    gap: var(--spacing-4);
-  }
-  
-  .dashboard-kpis {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-.dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: var(--spacing-6);
-}
-
-.dashboard-header h1 {
-  font-size: var(--font-size-2xl);
-  font-weight: 700;
-  margin: 0;
-  color: var(--gray-800);
-}
-
-.dashboard-subtitle {
-  color: var(--gray-500);
-  margin: var(--spacing-1) 0 0 0;
 }
 
 .dashboard-header-actions {
   display: flex;
   align-items: center;
   gap: var(--spacing-2);
+  width: 100%;
+}
+
+.dashboard-header-actions .dashboard-refresh,
+.dashboard-header-actions .dashboard-login-btn {
+  flex: 1;
+  justify-content: center;
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-2) var(--spacing-3);
 }
 
 .dashboard-refresh {
@@ -159,7 +67,6 @@
   background: var(--gray-50);
 }
 
-/* ✅ Bouton Connexion à côté d'Actualiser */
 .dashboard-login-btn {
   display: flex;
   align-items: center;
@@ -181,4 +88,185 @@
   box-shadow: var(--shadow-md);
   color: white;
   text-decoration: none;
+}
+
+/* ✅ KPIs - Grille responsive */
+.dashboard-kpis {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* ✅ Charts - Grille responsive */
+.dashboard-charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+/* ✅ Bottom - Grille responsive */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-3);
+}
+
+/* ✅ Cards */
+.chart-card,
+.status-card,
+.activities-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-3);
+  transition: box-shadow 0.2s;
+}
+
+.chart-card:hover,
+.status-card:hover,
+.activities-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.chart-card h3,
+.status-card h3,
+.activities-card h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin: 0 0 var(--spacing-3) 0;
+  color: var(--gray-700);
+}
+
+/* ✅ Page invité */
+.dashboard-guest {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  background: linear-gradient(135deg, var(--gray-50) 0%, white 100%);
+  padding: var(--spacing-4);
+}
+
+.dashboard-guest-content {
+  text-align: center;
+  padding: var(--spacing-6);
+  max-width: 500px;
+}
+
+.guest-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: var(--spacing-4);
+}
+
+.dashboard-guest-content h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: var(--spacing-2);
+}
+
+.dashboard-guest-content p {
+  color: var(--gray-500);
+  font-size: var(--font-size-base);
+  margin-bottom: var(--spacing-6);
+}
+
+.guest-login-btn {
+  display: inline-block;
+  padding: var(--spacing-2) var(--spacing-6);
+  background: var(--primary-color);
+  color: white;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  transition: all 0.2s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.guest-login-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  color: white;
+  text-decoration: none;
+}
+
+/* ============================================
+   ✅ BREAKPOINTS RESPONSIVE
+   ============================================ */
+
+/* ✅ Tablette (640px et plus) */
+@media (min-width: 640px) {
+  .dashboard {
+    padding: var(--spacing-4);
+  }
+  
+  .dashboard-kpis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .dashboard-header h1 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .guest-icon {
+    font-size: 64px;
+  }
+  
+  .dashboard-guest-content h1 {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+/* ✅ Desktop (1024px et plus) */
+@media (min-width: 1024px) {
+  .dashboard {
+    padding: var(--spacing-6);
+  }
+  
+  .dashboard-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .dashboard-header-actions {
+    width: auto;
+  }
+  
+  .dashboard-header-actions .dashboard-refresh,
+  .dashboard-header-actions .dashboard-login-btn {
+    flex: none;
+  }
+  
+  .dashboard-kpis {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-4);
+  }
+  
+  .dashboard-charts {
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .dashboard-bottom {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4);
+  }
+  
+  .chart-card,
+  .status-card,
+  .activities-card {
+    padding: var(--spacing-4);
+  }
+  
+  .guest-login-btn {
+    width: auto;
+  }
 }

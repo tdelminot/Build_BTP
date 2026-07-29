@@ -3,12 +3,14 @@
   background: white;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
+  -webkit-overflow-scrolling: touch;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
   font-size: var(--font-size-sm);
+  min-width: 600px;
 }
 
 .table thead {
@@ -16,18 +18,20 @@
 }
 
 .table th {
-  padding: var(--spacing-3) var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-3);
   text-align: left;
   font-weight: 600;
   color: var(--gray-600);
   border-bottom: 2px solid var(--gray-200);
   white-space: nowrap;
+  font-size: var(--font-size-sm);
 }
 
 .table td {
-  padding: var(--spacing-3) var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-3);
   border-bottom: 1px solid var(--gray-100);
   color: var(--gray-700);
+  font-size: var(--font-size-sm);
 }
 
 .table tbody tr:hover {
@@ -69,4 +73,40 @@
   background: white;
   border-radius: var(--radius-lg);
   color: var(--gray-500);
+}
+
+/* ============================================
+   ✅ BREAKPOINTS RESPONSIVE
+   ============================================ */
+
+/* ✅ Mobile - padding réduit */
+@media (max-width: 640px) {
+  .table-container {
+    margin: 0 calc(-1 * var(--spacing-3));
+    padding: 0 var(--spacing-3);
+    border-radius: 0;
+  }
+  
+  .table {
+    min-width: 500px;
+    font-size: var(--font-size-sm);
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--spacing-2);
+  }
+}
+
+/* ✅ Petit mobile */
+@media (max-width: 400px) {
+  .table {
+    min-width: 400px;
+    font-size: 0.75rem;
+  }
+  
+  .table th,
+  .table td {
+    padding: var(--spacing-1) var(--spacing-2);
+  }
 }
